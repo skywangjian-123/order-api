@@ -1,5 +1,4 @@
-﻿using OrderApi.Data;
-using OrderApi.Data.Models;
+﻿using OrderApi.Data.Models;
 using OrderApi.Data.Repositories.Interfaces;
 using System.ComponentModel.DataAnnotations;
 

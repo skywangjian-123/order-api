@@ -2,7 +2,6 @@
 using OrderApi.Data.DTOs.Input;
 using OrderApi.Data.DTOs.Output;
 using OrderApi.Data.Models;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OrderApi.Data.Profiles
 {

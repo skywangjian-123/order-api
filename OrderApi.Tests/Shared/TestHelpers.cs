@@ -1,15 +1,12 @@
 ﻿using AutoMapper;
 using FluentAssertions;
-using FluentAssertions.Primitives;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
-using NUnit.Framework;
 using OrderApi.Data;
-using OrderApi.Data.DTOs;
 using OrderApi.Data.DTOs.Input;
 using OrderApi.Data.Profiles;
 using OrderApi.Data.Repositories.Implementations;

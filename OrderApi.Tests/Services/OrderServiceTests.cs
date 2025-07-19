@@ -7,12 +7,7 @@ using OrderApi.Data.Repositories.Interfaces;
 using OrderApi.Services.Implementations;
 using OrderApi.Services.Interfaces;
 using OrderApi.Tests.Shared;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderApi.Tests.Services
 {

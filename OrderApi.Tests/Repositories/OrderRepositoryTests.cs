@@ -1,15 +1,8 @@
-﻿using FluentAssertions;
-using Microsoft.EntityFrameworkCore;
-using OrderApi.Data;
+﻿using OrderApi.Data;
 using OrderApi.Data.Models;
 using OrderApi.Data.Repositories.Implementations;
 using OrderApi.Tests.Shared;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderApi.Tests.Repositories
 {
