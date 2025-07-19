@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using OrderApi.DTOs.Input;
-using OrderApi.DTOs.Output;
-using OrderApi.Models;
-using OrderApi.Repositories.Interfaces;
+using OrderApi.Data.DTOs.Input;
+using OrderApi.Data.DTOs.Output;
+using OrderApi.Data.Models;
+using OrderApi.Data.Repositories.Interfaces;
+using OrderApi.Services.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace OrderApi.Controllers
@@ -13,17 +14,14 @@ namespace OrderApi.Controllers
     [Route("api/orders")]
     public class OrdersController : ControllerBase
     {
-        private readonly IOrderRepository _repository;
-        private readonly IMapper _mapper;
+        private readonly IOrderService _orderService;
         private readonly ILogger<OrdersController> _logger;
 
         public OrdersController(
-            IOrderRepository repository,
-            IMapper mapper,
+            IOrderService orderService,
             ILogger<OrdersController> logger)
         {
-            _repository = repository;
-            _mapper = mapper;
+            _orderService = orderService;
             _logger = logger;
         }
 
@@ -40,14 +38,11 @@ namespace OrderApi.Controllers
 
             try
             {
-                var order = _mapper.Map<Order>(orderDto);
-                var createdOrder = await _repository.CreateOrderAsync(order);
-                var response = _mapper.Map<OrderResponseDto>(createdOrder);
+                var responseDto = await _orderService.CreateOrderAsync(orderDto);
 
-                return CreatedAtAction(
-                    nameof(GetOrder),
-                    new { id = createdOrder.OrderId },
-                    response);
+                var locationUri = Url.Action(nameof(GetOrder), new { id = responseDto.OrderId })!;
+
+                return Created(locationUri, responseDto);
             }
             catch (ValidationException ex) // 捕获验证异常
             {

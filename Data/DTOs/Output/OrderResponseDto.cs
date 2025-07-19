@@ -1,4 +1,4 @@
-﻿namespace OrderApi.DTOs.Output
+﻿namespace OrderApi.Data.DTOs.Output
 {
     public class OrderResponseDto
     {

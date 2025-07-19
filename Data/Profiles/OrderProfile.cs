@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using OrderApi.DTOs.Input;
-using OrderApi.DTOs.Output;
-using OrderApi.Models;
+using OrderApi.Data.DTOs.Input;
+using OrderApi.Data.DTOs.Output;
+using OrderApi.Data.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace OrderApi.Profiles
+namespace OrderApi.Data.Profiles
 {
     public class OrderProfile : Profile
     {

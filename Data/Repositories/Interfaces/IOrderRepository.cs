@@ -1,6 +1,6 @@
-﻿using OrderApi.Models;
+﻿using OrderApi.Data.Models;
 
-namespace OrderApi.Repositories.Interfaces
+namespace OrderApi.Data.Repositories.Interfaces
 {
     public interface IOrderRepository
     {

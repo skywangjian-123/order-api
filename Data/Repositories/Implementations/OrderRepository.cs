@@ -1,9 +1,9 @@
 ﻿using OrderApi.Data;
-using OrderApi.Models;
-using OrderApi.Repositories.Interfaces;
+using OrderApi.Data.Models;
+using OrderApi.Data.Repositories.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
-namespace OrderApi.Repositories.Implementations
+namespace OrderApi.Data.Repositories.Implementations
 {
     public class OrderRepository : IOrderRepository
     {

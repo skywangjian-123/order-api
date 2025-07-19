@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OrderApi.DTOs.Input
+namespace OrderApi.Data.DTOs.Input
 {
     public class CreateOrderDto
     {

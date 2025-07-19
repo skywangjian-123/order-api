@@ -1,8 +1,10 @@
-﻿using OrderApi.Data;
-using Microsoft.EntityFrameworkCore;
-using OrderApi.Profiles;
-using OrderApi.Repositories.Implementations;
-using OrderApi.Repositories.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using OrderApi.Data;
+using OrderApi.Data.Profiles;
+using OrderApi.Data.Repositories.Implementations;
+using OrderApi.Data.Repositories.Interfaces;
+using OrderApi.Services.Implementations;
+using OrderApi.Services.Interfaces;
 
 namespace OrderApi.Extensions
 {
@@ -18,6 +20,11 @@ namespace OrderApi.Extensions
         public static void ConfigureRepositories(this IServiceCollection services)
         {
             services.AddScoped<IOrderRepository, OrderRepository>();
+        }
+
+        public static void ConfigureServices(this IServiceCollection services)
+        {
+            services.AddScoped<IOrderService, OrderService>();
         }
 
         public static void ConfigureAutoMapper(this IServiceCollection services)

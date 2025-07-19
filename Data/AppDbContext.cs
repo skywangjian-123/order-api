@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OrderApi.Models;
+using OrderApi.Data.Models;
 
 namespace OrderApi.Data
 {

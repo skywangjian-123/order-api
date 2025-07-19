@@ -15,6 +15,7 @@ builder.Services.AddSwaggerGen();
 // ≈‰÷√“¿¿µ◊¢»Î
 builder.Services.ConfigureSqliteContext(builder.Configuration);
 builder.Services.ConfigureRepositories();
+builder.Services.ConfigureServices();
 builder.Services.ConfigureAutoMapper();
 
 // ≈‰÷√»’÷æ

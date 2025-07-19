@@ -1,4 +1,4 @@
-﻿namespace OrderApi.Models
+﻿namespace OrderApi.Data.Models
 {
     public class Order
     {
